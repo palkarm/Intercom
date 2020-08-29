@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.*;
+//import org.junit.jupiter.api.*;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -13,7 +13,7 @@ public class ParseTextFile {
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     HashMap<Integer, String> mapCustomer = new HashMap<> ();
     public static void main(String[] args) throws IOException {
-        ParseTextFile parseTextFile = new ParseTextFile ( "CustomerList.txt" );
+        ParseTextFile parseTextFile = new ParseTextFile ( "/Users/manasipalkar/Desktop/CustomerList.txt" );
         parseTextFile.parseLineByLine ();
         parseTextFile.sortCustomer ();
     }
@@ -86,11 +86,6 @@ public ParseTextFile(String filename) {
             System.out.println ( "User Id: " + mapping.getKey () + " Name: " + mapping.getValue () );
         }
     }
-
-    private static void log(Object obj) {
-        System.out.println ( Objects.toString ( obj ) );
-    }
-
 
     private boolean getDistance(String latitude, String longitude, double lat2, double long2) {
         double lat1 = Double.parseDouble ( latitude );
