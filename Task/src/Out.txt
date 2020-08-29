@@ -1,34 +1,18 @@
-objc[23438]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x10034f4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x1013714e0). One of the two will be used. Which one is undefined.
-Distance 41.78052642783376 km
-Distance 83.55613163185212 km
-Distance 98.90253432637697 km
-Distance 24.092164861089575 km
-Distance 10.569921767650735 km
-Distance 23.29390003481406 km
-Distance 38.14834311351743 km
-Distance 44.303335850630376 km
-Distance 62.24928459915072 km
-Distance 43.734840383035525 km
-Distance 96.10574434363795 km
-Distance 38.36885207296833 km
-Distance 89.05618777936647 km
-Distance 72.22218468302523 km
-Distance 82.66619909328159 km
-Distance 82.71828993165794 km
+objc[27573]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x1055ac4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x106df04e0). One of the two will be used. Which one is undefined.
 Customer List within 100km after sorting by user_id in ascending order 
-User Id: 4 Name: Ian Kehoe"
-User Id: 5 Name: Nora Dempsey"
-User Id: 6 Name: Theresa Enright"
-User Id: 8 Name: Eoin Ahearn"
-User Id: 11 Name: Richard Finnegan"
-User Id: 12 Name: Christina McArdle"
-User Id: 13 Name: Olive Ahearn"
-User Id: 15 Name: Michael Ahearn"
-User Id: 17 Name: Patricia Cahill"
-User Id: 23 Name: Eoin Gallagher"
-User Id: 24 Name: Rose Enright"
-User Id: 26 Name: Stephen McArdle"
-User Id: 29 Name: Oliver Ahearn"
-User Id: 30 Name: Nick Enright"
-User Id: 31 Name: Alan Behan"
-User Id: 39 Name: Lisa Ahearn"
+User Id: 4 Name: Ian Kehoe
+User Id: 5 Name: Nora Dempsey
+User Id: 6 Name: Theresa Enright
+User Id: 8 Name: Eoin Ahearn
+User Id: 11 Name: Richard Finnegan
+User Id: 12 Name: Christina McArdle
+User Id: 13 Name: Olive Ahearn
+User Id: 15 Name: Michael Ahearn
+User Id: 17 Name: Patricia Cahill
+User Id: 23 Name: Eoin Gallagher
+User Id: 24 Name: Rose Enright
+User Id: 26 Name: Stephen McArdle
+User Id: 29 Name: Oliver Ahearn
+User Id: 30 Name: Nick Enright
+User Id: 31 Name: Alan Behan
+User Id: 39 Name: Lisa Ahearn

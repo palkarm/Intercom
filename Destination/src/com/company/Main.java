@@ -56,7 +56,7 @@ public final class Main {
                if(getDistance(latitude,longitude, 53.339428, -6.257664)){
 //           System.out.println(latitude.trim() + " "+  "; " + " "+longitude.trim());
 //
-              System.out.println(name.trim() + " "+  "; " + " "+user_id.trim());
+            System.out.println(name.trim() + " "+  "; " + " "+user_id.trim());
                 }
 
             }
@@ -68,18 +68,17 @@ public final class Main {
     }
     // get distance of each cordinate from the office location 53.339428, -6.257664
     public static boolean getDistance(String latitude, String longitude, double lat2, double long2) {
-//        String requiredLatitude = latitude.replaceAll("[a-zA-Z:\"\\s]","");
-//        String requiredLongitude = longitude.replaceAll("[a-zA-Z:\"\\s]","");
         double lat1 = Double.parseDouble(latitude);
         double long1 = Double.parseDouble(longitude);
         double deltaLat = Math.toRadians(lat2 - lat1);
         double deltaLong = Math.toRadians(long2 - long1);
         lat1 = Math.toRadians(lat1);
         lat2 = Math.toRadians(lat2);
-
-        double a = Math.pow(Math.sin(deltaLat / 2),2) + Math.pow(Math.sin(deltaLong / 2),2) * Math.cos(lat1) * Math.cos(lat2);
-        double c = 2 * Math.asin(Math.sqrt(a));
-        double distance =  6372.8 * c  ;
+       // double a = Math.pow(Math.sin(deltaLat / 2),2) + Math.pow(Math.sin(deltaLong / 2),2) * Math.cos(lat1) * Math.cos(lat2);
+       // double c = 2 * Math.asin(Math.sqrt(a));
+        double a =((Math.sin(lat1))*(Math.sin(lat2)))+((Math.cos(lat1))*(Math.cos ( lat2 ))*(Math.cos(deltaLong)));
+        double c =Math.acos ( a );
+        double distance =  6371 * c;
        if(distance<=100)
        {System.out.println ("Distance " + distance + " km");}
         return distance<=100;
