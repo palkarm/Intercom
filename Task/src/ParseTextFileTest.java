@@ -52,10 +52,12 @@ class ParseTextFileTest {
                 System.out.println("Valid Geo-Cordinates");
                 return true;
             }
-            if(Latitude==null || Latitude.isEmpty ()){
+            if((Latitude==null || Latitude.isEmpty ())&& (Longitude==null ||Longitude.isEmpty ())){
+
             System.out.println("Incorrect format of input cordinates");
             return false;
             }
+
             return  true;
         }
 
