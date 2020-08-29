@@ -13,7 +13,7 @@ public class ParseTextFile {
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     HashMap<Integer, String> mapCustomer = new HashMap<> ();
     public static void main(String[] args) throws IOException {
-        ParseTextFile parseTextFile = new ParseTextFile ( "/Users/manasipalkar/Desktop/CustomerList.txt" );
+        ParseTextFile parseTextFile = new ParseTextFile ( "CustomerList.txt" );
         parseTextFile.parseLineByLine ();
         parseTextFile.sortCustomer ();
     }
