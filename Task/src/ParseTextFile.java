@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -62,7 +62,7 @@ public ParseTextFile(String filename) {
         }
 
     }
-
+ /* Checks if the cordinates in the file are valid*/
     private boolean checkGeocordinates(String latitude, String longitude) {
         double lat1 = Double.parseDouble ( latitude );
         double long1 = Double.parseDouble ( longitude );
@@ -91,7 +91,7 @@ public ParseTextFile(String filename) {
         System.out.println ( Objects.toString ( obj ) );
     }
 
-    @Test
+
     private boolean getDistance(String latitude, String longitude, double lat2, double long2) {
         double lat1 = Double.parseDouble ( latitude );
         double long1 = Double.parseDouble ( longitude );

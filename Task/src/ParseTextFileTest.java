@@ -20,9 +20,15 @@ class ParseTextFileTest {
    void main() {
         File file = new File ( "/" );
         //Check if file exists at current directory
+        File fileInput = new File("CustomerList.txt")   ;
+
         if (file.exists ())
             System.out.println ( "File found at the directory" );
-            checkGeocordinates ( "52.986375","-6.043701" );
+            if(fileInput.length ()==0)
+            System.out.println("File is empty");
+            else
+                System.out.println("File is not empty");
+        checkGeocordinates("0","0");
     }
 
         /**
