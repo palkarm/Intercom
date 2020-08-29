@@ -49,21 +49,15 @@ public final class Main {
                     String longitude = scanner.next ();
                     latitude = latitude.replaceAll ( "[a-zA-Z:\"\\s]", "" ).replaceAll ( "\\p{Ps}", "" );
                     longitude = longitude.replaceAll ( "[a-zA-Z:\"\\s]", "" ).replaceAll("}$", "");
-//                FileWriter fw = new FileWriter ( "Output.txt" );
-//                fw.write ( name.trim () + " ; " + user_id.trim ());
-//
-//
-               if(getDistance(latitude,longitude, 53.339428, -6.257664)){
-//           System.out.println(latitude.trim() + " "+  "; " + " "+longitude.trim());
-//
-            System.out.println(name.trim() + " "+  "; " + " "+user_id.trim());
-                }
-
-            }
-            else {
-                log("Empty or invalid line. Unable to process.");
-            }
-
+               if(checkGeocordinates(latitude.trim(),longitude.trim())) {
+                   if(getDistance(latitude,longitude, 53.339428, -6.257664)){
+                       System.out.println(name.trim() + " "+  "; " + " "+user_id.trim());
+                   }
+               }
+               else {
+                   log("Empty or invalid line. Unable to process.");
+               }
+               }
         }
     }
     // get distance of each cordinate from the office location 53.339428, -6.257664
@@ -74,14 +68,27 @@ public final class Main {
         double deltaLong = Math.toRadians(long2 - long1);
         lat1 = Math.toRadians(lat1);
         lat2 = Math.toRadians(lat2);
-       // double a = Math.pow(Math.sin(deltaLat / 2),2) + Math.pow(Math.sin(deltaLong / 2),2) * Math.cos(lat1) * Math.cos(lat2);
-       // double c = 2 * Math.asin(Math.sqrt(a));
         double a =((Math.sin(lat1))*(Math.sin(lat2)))+((Math.cos(lat1))*(Math.cos ( lat2 ))*(Math.cos(deltaLong)));
         double c =Math.acos ( a );
         double distance =  6371 * c;
        if(distance<=100)
        {System.out.println ("Distance " + distance + " km");}
         return distance<=100;
+    }
+    public static  boolean checkGeocordinates(String latitude,String longitude){
+        double lat1 = Double.parseDouble(latitude);
+        double long1 = Double.parseDouble(longitude);
+        if (lat1 < -90 || lat1 > 90) {
+            System.out.println ("Invalid Latitude");
+            return false;
+
+        }
+        if (long1 < -180 || long1 > 180) {
+            System.out.println("Invalid Longitude");
+            return false;
+        }
+        //System.out.println("Valid Geo-Cordinates");
+        return true;
     }
     // PRIVATE
     private final Path filePath;

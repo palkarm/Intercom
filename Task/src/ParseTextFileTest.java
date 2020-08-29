@@ -44,7 +44,6 @@ class ParseTextFileTest {
             }
             System.out.println("Valid Geo-Cordinates");
             return true;
-
         }
 
 }
