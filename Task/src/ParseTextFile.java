@@ -46,16 +46,38 @@ public ParseTextFile(String filename) {
                 String longitude = scanner.next ();
                 latitude = latitude.replaceAll ( "[a-zA-Z:\"\\s]", "" ).replaceAll ( "\\p{Ps}", "" );
                 longitude = longitude.replaceAll ( "[a-zA-Z:\"\\s]", "" ).replaceAll ( "}$", "" );
-                if (getDistance ( latitude, longitude, 53.339428, -6.257664 )) {
-                    mapCustomer.put ( Integer.parseInt ( user_id.trim ().substring ( 11 ) ), name.trim ().substring ( 9 ).replace("\"", "")) ;
+                /*
+                * Check if the latitude and longitude in the file are valid
+                * Only for valid cordinates call the getDistance functions
+                * */
+                if(checkGeocordinates(latitude,longitude)){
+                    if (getDistance ( latitude, longitude, 53.339428, -6.257664 )) {
+                        mapCustomer.put ( Integer.parseInt ( user_id.trim ().substring ( 11 ) ), name.trim ().substring ( 9 ).replace("\"", "")) ;
+                    }
                 }
+
             } else {
                 System.out.println ( "Unprocessed record" );
             }
         }
 
     }
-        //sorting customer list within 100 km by key (user_id) in ascending order
+
+    private boolean checkGeocordinates(String latitude, String longitude) {
+        double lat1 = Double.parseDouble ( latitude );
+        double long1 = Double.parseDouble ( longitude );
+        if (lat1 < -90 || lat1 > 90) {
+            System.out.println ("Invalid Latitude");
+            return false;
+        }
+        if (long1 < -180 || long1 > 180) {
+            System.out.println("Invalid Longitude");
+            return false;
+        }
+        return true;
+    }
+
+    //sorting customer list within 100 km by key (user_id) in ascending order
     private void sortCustomer() {
         TreeMap<Integer, String> sorted = new TreeMap<Integer, String> ( mapCustomer );
         Set<Map.Entry<Integer, String>> mappings = sorted.entrySet ();

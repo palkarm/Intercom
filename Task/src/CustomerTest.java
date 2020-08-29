@@ -9,7 +9,7 @@ class CustomerTest {
     @Test
     void setUp() {
         Customer customer = new Customer ("", 40);
-        assertNull ( customer ,"invalid" );
+        assertNull ( " " ,"invalid" );
     }
 
     @AfterEach
