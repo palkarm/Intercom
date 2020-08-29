@@ -29,6 +29,8 @@ class ParseTextFileTest {
             else
                 System.out.println("File is not empty");
         checkGeocordinates("1 ","2 ");
+        checkGeocordinates("58 ","179 ");
+        checkGeocordinates(""," ");
     }
 
         /**
