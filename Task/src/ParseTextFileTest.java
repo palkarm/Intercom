@@ -30,7 +30,7 @@ class ParseTextFileTest {
                 System.out.println("File is not empty");
         checkGeocordinates("1 ","2 ");
         checkGeocordinates("58 ","179 ");
-        checkGeocordinates(""," ");
+        checkGeocordinates(" "," ");
     }
 
         /**
@@ -54,8 +54,7 @@ class ParseTextFileTest {
                 System.out.println("Valid Geo-Cordinates");
                 return true;
             }
-            if((Latitude==null || Latitude.isEmpty ())&& (Longitude==null ||Longitude.isEmpty ())){
-
+            if(Latitude.equalsIgnoreCase (" ")){
             System.out.println("Incorrect format of input cordinates");
             return false;
             }

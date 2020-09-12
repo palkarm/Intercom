@@ -18,6 +18,7 @@ public class ParseTextFile {
         parseTextFile.sortCustomer ();
     }
     //getFile Name within the Constructor
+    //immutableobjects should be used to initialise the constructor
 public ParseTextFile(String filename) {
         filePath = get ( filename );
     }
@@ -81,6 +82,7 @@ public ParseTextFile(String filename) {
     private void sortCustomer() {
         TreeMap<Integer, String> sorted = new TreeMap<Integer, String> ( mapCustomer );
         Set<Map.Entry<Integer, String>> mappings = sorted.entrySet ();
+        
         System.out.println ( "Customer List within 100km after sorting by user_id in ascending order " );
         for (Entry<Integer, String> mapping : mappings) {
             System.out.println ( "User Id: " + mapping.getKey () + " Name: " + mapping.getValue () );
