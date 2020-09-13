@@ -5,6 +5,7 @@ public static void main(String args[]){
 }
 
     private static int search(int nums[], int target) {
+    int cnt=0;
     int low=0,high = nums.length-1;
     int len = nums.length/2;
    while(low<high){
@@ -14,7 +15,7 @@ public static void main(String args[]){
        else return high=mid-1;
 
    }
-   System.out.println (low);
+
         return low;
     }
 
