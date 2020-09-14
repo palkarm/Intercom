@@ -3,13 +3,22 @@ import java.util.Arrays;
 public class ValidAnagram {
     public static void main(String args[]){
         anagram("abc","cba");
-//        ispalindrome("ama");
+       ispalindrome("A,man nama");
     }
 
-//    private static boolean ispalindrome(String str) {
-//        if(str==null) return true;
-//       for()
-//    }
+    private static boolean ispalindrome(String str) {
+        if(str==null) return true;
+       for(int i =0,j=str.length ()-1;i<j;i++,j--){
+           while(i<j && !Character.isLetterOrDigit ( str.charAt ( i ) )){
+               i++;
+           }
+           while(i<j && !Character.isLetterOrDigit ( str.charAt ( j ) )){
+               j--;
+           }
+           if(i<j && Character.toLowerCase ( str.charAt (i))!=Character.toLowerCase (str.charAt ( j ))) return false;
+       }
+        return  true;
+    }
 
     private static boolean anagram(String s, String t) {
         char c1[] =s.toCharArray ();
