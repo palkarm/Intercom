@@ -1,5 +1,4 @@
-objc[52660]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x10b79b4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10b7e64e0). One of the two will be used. Which one is undefined.
-[4=Ian Kehoe, 5=Nora Dempsey, 6=Theresa Enright, 8=Eoin Ahearn, 11=Richard Finnegan, 12=Christina McArdle, 13=Olive Ahearn, 15=Michael Ahearn, 17=Patricia Cahill, 23=Eoin Gallagher, 24=Rose Enright, 26=Stephen McArdle, 29=Oliver Ahearn, 30=Nick Enright, 31=Alan Behan, 39=Lisa Ahearn]
+objc[44526]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x1027244c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x1037464e0). One of the two will be used. Which one is undefined.
 Customer List within 100km after sorting by user_id in ascending order 
 User Id: 4 Name: Ian Kehoe
 User Id: 5 Name: Nora Dempsey
