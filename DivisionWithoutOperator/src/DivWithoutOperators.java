@@ -1,7 +1,7 @@
 public class DivWithoutOperators {
 
     public static void main(String args[]){
-        division(17,5);
+        division(33,5);
     }
 
     private static int division(int dividend, int divisor) {
@@ -19,10 +19,16 @@ public class DivWithoutOperators {
         }
         int quotient =0;
         while(dividend-divisor<=0){
-          quotient++;
+          quotient--;
           dividend=dividend-divisor;
           System.out.println ("Quotient:"+ quotient);
         }
+
+        if (negatives != 1) {
+            quotient = -quotient;
+
+        }
+        System.out.println (" Final Quotient is:"+ quotient);
         return quotient;
     }
 
